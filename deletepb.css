@@ -1,0 +1,159 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure the body takes at least the full viewport height */
+}
+
+.background-container {
+    position: relative;
+    flex: 1; /* Allow this section to take up remaining vertical space */
+    overflow: hidden;
+}
+
+.background-image {
+    background: url('deletepb.jpg') no-repeat center center fixed;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+}
+
+header {
+    background-color: #8a2be2; /* Smooth purple */
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    position: relative;
+    z-index: 1;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#info {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #f8f9fa;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 2rem;
+    border-radius: 10px;
+    z-index: 2;
+    position: relative;
+    max-width: 800px;
+    margin: auto;
+}
+
+.best-server-button {
+    background-color: purple;
+    color: white;
+    padding: 10px 20px;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 1rem;
+    position: relative;
+    cursor: not-allowed;
+    animation: glow 1.5s infinite;
+}
+
+@keyframes glow {
+    0% {
+        box-shadow: 0 0 5px purple;
+    }
+    50% {
+        box-shadow: 0 0 20px purple;
+    }
+    100% {
+        box-shadow: 0 0 5px purple;
+    }
+}
+
+main {
+    padding: 1rem;
+    position: relative;
+    animation: fadeInUp 1s ease-out;
+    background: linear-gradient(to bottom, black, purple);
+    flex: 1; /* Allow the main content section to take up remaining vertical space */
+}
+
+#menu, #boost, #more-info {
+    background-color: rgba(51, 51, 51, 0.8);
+    color: white;
+    padding: 1rem;
+    border-radius: 5px;
+    margin-bottom: 2rem;
+    animation: fadeInUp 1s ease-out;
+}
+
+#menu ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#menu ul li {
+    margin: 0.5rem 0;
+}
+
+.menu-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.menu-button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+.menu-button::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle at center, white 10%, transparent 10.1%);
+    animation: move-glow 3s linear infinite;
+}
+
+@keyframes move-glow {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+footer {
+    background-color: #8a2be2; /* Smooth purple */
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: auto; /* Push the footer to the bottom of the flex container */
+}
+.official-button {
+    background-color: green;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: not-allowed;
+    opacity: 0.5;
